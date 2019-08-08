@@ -19,10 +19,10 @@ describe('<Dashboard />', () => {
     const callback = name => () => (target = name);
     const dashboardRender = render(
         <Dashboard 
-            strike={callback('Strike')}
-            ball={callback('Ball')}
-            foul={callback('Foul')}
-            hit={callback('Hit')}
+            strike = {callback('Strike')}
+            ball = {callback('Ball')}
+            foul = {callback('Foul')}
+            hit = {callback('Hit')}
         />
     );
     const fireButtons = ['Strike', 'Ball', 'Foul', 'Hit'].map(name => dashboardRender.getByText(new RegExp(name, 'i')));
